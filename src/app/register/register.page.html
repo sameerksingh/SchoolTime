@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color = "secondary">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/student"></ion-back-button>
+        </ion-buttons>
+    <ion-title>REGISTER</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-item> 
+          <ion-label position="floating">NAME OF STUDENT</ion-label>
+          <ion-input type="text" [(ngModel)]="name"></ion-input>
+        </ion-item>
+   
+        <ion-item>
+          <ion-label position="floating">CLASS (eg. 6C)</ion-label>
+          <ion-input type="text" [(ngModel)]="class"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">ROLL NUMBER</ion-label>
+            <ion-input type="number" [(ngModel)]="rolln"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label position="floating">ADMISSION NUMBER</ion-label>
+              <ion-input type="number" [(ngModel)]="admno"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">PHONE NUMBER (in school contacts)</ion-label>
+                <ion-input type="number" [(ngModel)]="phone"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label position="floating">USERNAME</ion-label>
+                  <ion-input type="text" [(ngModel)]="username"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">PASSWORD</ion-label>
+                    <ion-input type="password" [(ngModel)]="password"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-label position="floating">CONFIRM PASSWORD</ion-label>
+                      <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
+                    </ion-item>
+
+                    <ion-button position="end" fill="solid" expand="block" color="danger">REGISTER!</ion-button>
+                    
+       </ion-list>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color = "secondary">
+      <ion-title >LOGIN</ion-title>
+
+    <ion-segment ><!--(ionChange)="segmentChanged($event)"**/-->
+        <ion-segment-button value="Student">
+          <ion-label>Student</ion-label>
+          <!--<ion-icon name="camera"></ion-icon>-->
+        </ion-segment-button>
+        <ion-segment-button value="Parent">
+            <ion-label>Parent</ion-label>
+          <!----<ion-icon name="bookmark"></ion-icon>-->
+        </ion-segment-button>
+      </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-item *ngFor="let school of schools">
+        
+            <ion-img [src]="school.imageUrl"></ion-img>
+          
+
+        </ion-item>
+      </ion-list>
+
+  <ion-list>
+     <ion-item> 
+       <ion-label position="floating">USERNAME</ion-label>
+       <ion-input type="text" [(ngModel)]="username"></ion-input>
+     </ion-item>
+
+     <ion-item>
+       <ion-label position="floating">PASSWORD</ion-label>
+       <ion-input type="password" [(ngModel)]="password"></ion-input>
+     </ion-item>
+    </ion-list>
+
+    <ion-button position="start" fill="solid" expand="block" color="tertiary" (click)="login()">LOGIN</ion-button>
+    
+    <ion-button  position="end" fill="solid" expand="block" color="danger" href="/register">REGISTER</ion-button>
+</ion-content>
